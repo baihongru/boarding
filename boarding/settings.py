@@ -12,6 +12,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+from django.contrib.admin.sites import AdminSite
+
+# 设置管理站点
+
+AdminSite.site_header = 'Boarding Administration'
+AdminSite.site_title = 'Boarding'
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
+    'jobs.apps.JobsConfig',
 ]
 
 MIDDLEWARE = [

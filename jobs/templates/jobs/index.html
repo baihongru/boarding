@@ -1,0 +1,20 @@
+{% extends 'jobs/base.html' %}
+
+{% block content %}
+
+<div style="margin: auto; width: 50%;">
+    欢迎上船！探索汪洋大海。
+    <h2>职位列表：</h2>
+    <hr>
+    {% if jobs %}
+        <ul>
+            {% for job in jobs %}
+            <li>{{ job.type_name }} <a href="{% url 'jobs:detail' job.id %}" style="color: blue; ">{{ job.job_name }}</a> {{ job.city_name}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>没有可以显示的职位。</p>
+    {% endif %}
+</div>
+
+{% endblock %}
