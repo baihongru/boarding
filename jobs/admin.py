@@ -14,7 +14,7 @@ class JobAdmin(admin.ModelAdmin):
     # TODO：增加过滤器，时间、职位类型、职位地点
 
     # TODO：需要校验request中的用户是否存在于用户表中
-    def save_model(self, request, obj, form, change) -> None:
+    def save_model(self, request, obj, form, change):
         obj.creator = request.user
         super().save_model(request, obj, form, change)
 
