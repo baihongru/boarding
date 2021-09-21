@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'jobs.apps.JobsConfig',
+    'interviews.apps.InterviewsConfig',
 ]
 
 MIDDLEWARE = [
